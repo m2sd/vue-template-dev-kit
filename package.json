@@ -1,27 +1,30 @@
 {
-  "name": "napura",
-  "description": "Napura style guide",
-  "version": "1.0.0",
+  "name": "vue-template-dev-kit",
+  "description": "A webpack setup to generate static templates with styleguide.",
+  "version": "0.1.0",
   "author": "Michael Marcenich <michael.marcenich@gmail.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --config=config/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=config/webpack.prod.js",
-    "styleguide": "vue-styleguidist server --config=config/styleguide.js",
-    "styleguide:build": "vue-styleguidist build",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --config config/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config config/webpack.prod.js",
+    "styleguide": "vue-styleguidist server --open --config config/styleguide.js",
+    "styleguide:build": "vue-styleguidist build --config config/styleguide.js",
     "lint": "eslint --ext .js,.vue src",
     "lint-autofix": "eslint --ext .js,.vue src --fix",
     "lint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "precommit": "npm run lint-check && npm run lint"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vue-carousel": "^0.13.1"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
   ],
   "devDependencies": {
+    "autoprefixer": "^9.1.3",
     "babel-core": "^6.26.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^7.1.2",
@@ -47,19 +50,20 @@
     "html-webpack-plugin": "^3.2.0",
     "husky": "^0.14.3",
     "imagemin-webpack-plugin": "^2.2.0",
+    "media-query-plugin": "^1.2.0",
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.5.3",
+    "postcss-loader": "^3.0.0",
     "prerender-spa-plugin": "^3.4.0",
     "prettier": "^1.14.2",
     "sass-loader": "^6.0.6",
     "stylelint": "^9.5.0",
     "stylelint-webpack-plugin": "^0.10.5",
-    "uglifyjs-webpack-plugin": "^1.3.0",
-    "vue": "^2.5.17",
     "vue-loader": "^15.4.1",
     "vue-styleguidist": "^1.8.4",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^4.17.1",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.7"
   }

@@ -10,4 +10,4 @@ new Vue({
     document.dispatchEvent(new Event('render-event'))
   },
   render: h => h(Layout)
-})
+});

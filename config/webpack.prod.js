@@ -12,8 +12,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // Optimization
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJSWebpackPlugin = require('uglifyjs-webpack-plugin');
-const ImageMinWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageMinPlugin = require('imagemin-webpack-plugin').default;
 const HTMLCriticalPlugin = require('html-critical-webpack-plugin');
 
 // Static file generation
@@ -34,7 +33,7 @@ CONFIG.plugins = (CONFIG.plugins || []).concat([
   new webpack.LoaderOptionsPlugin({
     minimize: true
   }),
-  new ImageMinWebpackPlugin({
+  new ImageMinPlugin({
     test: /\.(jpe?g|png|gif|svg)$/i,
     optipng: { optimizationLevel: 3 },
     jpegtran: { progressive: true },
@@ -82,13 +81,7 @@ CONFIG.optimization = {
         chunks: 'all'
       }
     }
-  },
-  minimizer: [
-    new UglifyJSWebpackPlugin({
-      cache: true,
-      parallel: true
-    })
-  ]
+  }
 };
 
 module.exports = CONFIG;

@@ -1,8 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PageName - <%= htmlWebpackPlugin.options.title || 'New Website' %></title>
+
+  <meta name="author" content="<%= htmlWebpackPlugin.options.author || '' %>">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <meta itemprop="name" content="<%= htmlWebpackPlugin.options.title %>">
+  <meta itemprop="description" content="Content description less than 200 characters">
+  <meta itemprop="image" content="">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Project">
+
+  <meta property="og:url" content="http://example.com">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PageName">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.title %>">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@site_account">
+  <meta name="twitter:creator" content="@individual_account">
+  <meta name="twitter:url" content="http://example.com">
+  <meta name="twitter:title" content="Project">
+  <meta name="twitter:description" content="Content description less than 200 characters">
+  <meta name="twitter:image" content="http://yourawesomeproject.com/image.jpg">
+
+  <link href="https://plus.google.com/+YourPage" rel="publisher">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="alternate" hreflang="en" href="http://yourawesomeproject.com/en">
+  <link type="text/plain" rel="author" href="humans.txt">
+  <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
     <div id="page"></div>
