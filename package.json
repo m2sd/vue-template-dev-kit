@@ -2,7 +2,7 @@
   "name": "vue-template-dev-kit",
   "description": "A webpack setup to generate static vue templates with styleguide.",
   "version": "0.1.0",
-  "author": "Michael Marcenich <michael.marcenich@gmail.com>",
+  "author": "Michael Marcenich <info@m-squared-solutions.it>",
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --config config/webpack.dev.js",
