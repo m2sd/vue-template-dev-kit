@@ -8,7 +8,7 @@ const webpack = require('webpack');
 
 /** Plugins */
 // Cleanup
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanPlugin = require('clean-webpack-plugin');
 
 // Optimization
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
@@ -27,7 +27,7 @@ CONFIG.plugins = (CONFIG.plugins || []).concat([
       NODE_ENV: '"production"'
     }
   }),
-  new CleanWebpackPlugin(['dist'], {
+  new CleanPlugin(['dist'], {
     root: path.resolve(__dirname, '../')
   }),
   new webpack.LoaderOptionsPlugin({

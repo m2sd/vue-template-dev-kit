@@ -18,7 +18,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 
 /** Variables */
 const ENV = process.env.NODE_ENV;
-const styleLoader = (ENV === 'development') ? 'vue-style-loader' : require('mini-css-extract-plugin').loader;
+const styleLoader = (ENV === 'production') ? require('mini-css-extract-plugin').loader : 'vue-style-loader';
 const postCssLoader = {
   loader: 'postcss-loader',
   options: {

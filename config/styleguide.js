@@ -1,7 +1,19 @@
 'use strict';
 
+const path = require('path');
+const wpConfig = require('./webpack.base');
+
+const CleanPlugin = require('clean-webpack-plugin');
+
+wpConfig.plugins.push(
+  new CleanPlugin(['styleguide'], {
+    root: path.resolve(__dirname, '../')
+  }),
+);
+
 module.exports = {
-  webpackConfig: require('./webpack.base'),
+  webpackConfig: wpConfig,
+  styleguideDir: path.resolve(__dirname, '../styleguide/'),
   sections: [
     {
       name: "UI Components",
